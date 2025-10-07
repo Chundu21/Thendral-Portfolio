@@ -1,166 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thendral A | Portfolio</title>
-  <link href="profile.jpg" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #e0eafc, #cfdef3);
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #1b1f3a;
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    header img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #ffc107;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1rem;
-      color: #ccc;
-    }
-    a {
-      color: #ffc107;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 2.5rem 1.5rem;
-      max-width: 1000px;
-      margin: auto;
-      background: white;
-      margin-top: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      color: #1b1f3a;
-      border-left: 5px solid #ffc107;
-      padding-left: 1rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 0.75rem;
-    }
-    .highlight {
-      font-weight: 600;
-      color: #1b1f3a;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #1b1f3a;
-      color: white;
-      margin-top: 3rem;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thendral A | AI & Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Color Variables */
+        :root {
+            --primary-dark: #1b1f3a; 
+            --accent-gold: #ffc107; 
+            --light-bg: #f8f9fa; 
+            --text-dark: #333; 
+            --secondary-light: #e0eafc; 
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 🚀 Smooth Scrolling Feature */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--secondary-light), #cfdef3);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Container for main content */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header Section */
+        header {
+            background: var(--primary-dark);
+            color: white;
+            padding-bottom: 0; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+
+        /* 🧭 Navigation Bar */
+        nav {
+            background-color: #2c3e50; 
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--accent-gold);
+            margin-bottom: 1rem;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Info in Header */
+        .contact-info a {
+            color: var(--accent-gold);
+            margin: 0 0.75rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 2.5rem 1.5rem;
+            background: var(--light-bg);
+            margin-top: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        h2 {
+            color: var(--primary-dark);
+            border-left: 5px solid var(--accent-gold);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-family: 'Fira Code', monospace;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        
+        .highlight {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        /* Card Layout for Experience/Projects */
+        .card-list {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ddd;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card strong {
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Image Grids for Achievements/Certifications/Workshops */
+        .visual-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .visual-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .visual-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .visual-item .details {
+            font-size: 0.9em;
+        }
+
+        .visual-item .details strong {
+            display: block;
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        /* Achievement Specific Styling */
+        .achievement-card {
+            background-color: #fffaf0; /* Light yellow background */
+            border-left: 5px solid #ff9800; /* Orange-Gold line */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: var(--primary-dark);
+            color: white;
+            margin-top: 3rem;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        /* QR Code Styling */
+        .qr-code-section {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .qr-code-section img {
+            width: 150px;
+            height: 150px;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .visual-grid {
+                grid-template-columns: 1fr;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="profile.jpg" alt="Thendral A">
-    <h1>Thendral A</h1>
-    <p>Computer Science Undergraduate | Full Stack Developer | AI & Automation Enthusiast</p>
-    <p><a href="mailto:chunduthendral@gmail.com">chunduthendral@gmail.com</a> | +91 8838000732 | <a href="https://www.linkedin.com/in/thendral21" target="_blank">LinkedIn</a></p>
-  </header>
+    <header>
+        <div class="header-content">
+            <img src="images/thendral_profile.jpg.jpg" alt="Thendral A">
+            <h1>Thendral A</h1>
+            <p>AI & Generative AI Certified Professional | Engineering Student</p>
+            <div class="contact-info">
+                <p>
+                    <a href="mailto:chunduthendral@gmail.com">chunduthendral@gmail.com</a> |
+                    +91 8838000732 |
+                    <a href="https://www.linkedin.com/in/thendral21" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+        <nav>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#workshops">Workshops</a> 
+            <a href="#technical-skills">Skills</a>
+            <a href="#education">Education</a>
+        </nav>
+    </header>
 
-  <section>
-    <h2>Objective</h2>
-    <p>Motivated and curious Computer Science undergraduate passionate about upskilling, hands-on learning, and solving real-world problems in dynamic environments.</p>
-  </section>
+    <div class="container">
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>Motivated and curious Computer Science undergraduate passionate about upskilling, hands-on learning, and solving real-world problems in dynamic environments.</p>
+        </section>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li><span class="highlight">B.E. Computer Science</span>, Panimalar Engineering College (2022–2026) – CGPA: 8.64</li>
-      <li>12th Grade, Sambaviga Hr. Sec. School – 90.5%</li>
-      <li>10th Grade, Sambaviga Hr. Sec. School – 72.6%</li>
-    </ul>
-  </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="card-list">
+                <div class="card">
+                    <strong>Full Stack Developer Intern</strong>
+                    <p>Vinsup Infotech, Madurai</p>
+                    <p class="highlight">Jun 2024 – Jul 2025</p>
+                    <p>Worked on frontend/backend web development during a 15-day internship.</p>
+                </div>
+                <div class="card">
+                    <strong>Cyber Security Intern</strong>
+                    <p>Acmegrade / IIT Bombay Mood Indigo</p>
+                    <p class="highlight">Jan 2024 – Feb 2024</p>
+                    <p>Trained in ethical hacking and essential cyber threat tools.</p>
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><span class="highlight">Languages:</span> Python, Java, C++, SQL</li>
-      <li><span class="highlight">Web Development:</span> HTML, CSS, JavaScript</li>
-      <li><span class="highlight">Tools:</span> VS Code, Git, UiPath, Arduino</li>
-      <li><span class="highlight">Soft Skills:</span> Fast Learner, Problem Solving, Team Collaboration</li>
-    </ul>
-  </section>
+        <section id="certifications">
+            <h2>Certifications (Visual)</h2>
+            <div class="visual-grid">
+                <div class="visual-item">
+                    <img src="images/oci_certificate.jpg.png" alt="OCI Cert">
+                    <div class="details">
+                        <strong>OCI 2024 Generative AI Certified Professional</strong>
+                        <p>Oracle (Jul 2024)</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/nasscom_gold.png.jpeg" alt="NASSCOM Gold">
+                    <div class="details">
+                        <strong>Data Science for Beginners - Gold Medal</strong>
+                        <p>NASSCOM FutureSkills (Dec 2023)</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/guvi_ml.png.png" alt="GUVI ML">
+                    <div class="details">
+                        <strong>Machine Learning 101 / Generative AI</strong>
+                        <p>GUVI (Sep 2024)</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/nptel_java.png.png" alt="NPTEL Java" onerror="this.src='nptel_java.png'">
+                    <div class="details">
+                        <strong>Programming in Java</strong>
+                        <p>NPTEL (Jul–Oct 2024)</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/uipath.png" alt="UiPath Cert" onerror="this.src='uipath_cert.png'">
+                    <div class="details">
+                        <strong>UiPath Automation Developer</strong>
+                        <p>UiPath (May 2025)</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/infosysdatascience.png" alt="Infosys DS" onerror="this.src='intro_data_science.png'">
+                    <div class="details">
+                        <strong>Intro to Data Science</strong>
+                        <p>Infosys (Mar 2025)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Sound Synth</strong> – Summarized voice recordings using speech-to-text and NLP</li>
-      <li><strong>Recommendation System</strong> – ML-based product recommender for user personalization</li>
-    </ul>
-  </section>
+        <section id="workshops">
+            <h2>Key Workshops & Events Attended</h2>
+            <div class="visual-grid">
+                <div class="visual-item">
+                    <img src="images/vscode_devdays.jpg.jpeg" alt="VS Code Dev Days">
+                    <div class="details">
+                        <strong>VS Code Dev Days</strong>
+                        <p>Microsoft Office, Bengaluru (Hands-on Development)</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/iot_workshop.jpg.jpeg" alt="IoT Workshop">
+                    <div class="details">
+                        <strong>IoT using Arduino Workshop</strong>
+                        <p>Training on Real-Time IoT Projects and Embedded Systems</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/cybersec_iitb.jpg.jpeg" alt="Cyber Security Training">
+                    <div class="details">
+                        <strong>Cyber Security Training</strong>
+                        <p>Acmegrade / IIT Bombay Training on Ethical Hacking</p>
+                    </div>
+                </div>
+                <div class="visual-item">
+                    <img src="images/ml_hands_on.png.jpeg" alt="ML Hands-on">
+                    <div class="details">
+                        <strong>Hands-on Session in Machine Learning</strong>
+                        <p>Practical application and model development</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects & Major Achievements</h2>
+            <div class="card-list">
+                <div class="card achievement-card">
+                    <strong>Social Media Titan Award 🏆</strong>
+                    <p>Recognized as **Social Media Titan** in the Hexaware Premier League 2025.</p>
+                    <div class="qr-code-section" style="margin-top: 10px;">
+                       <img src="images/hexaware_award.jpg.jpeg" alt="Award with Rahul Dravid" style="width: 100px; height: auto; border: none; box-shadow: none;">
+                    </div>
+                </div>
+                <div class="card achievement-card">
+                    <strong>Sound Synth: Speech Summarization (IV Prize)</strong>
+                    <p>Secured **4th Place** at the 7th International Conference (PECTEAM 2K24) for a Full Stack & NLP project.</p>
+                    <div class="qr-code-section" style="margin-top: 10px;">
+                       <img src="images/soundsynth_trophy.jpg.jpeg" alt="Sound Synth Trophy" style="width: 100px; height: auto; border: none; box-shadow: none;">
+                    </div>
+                </div>
+                <div class="card">
+                    <strong>Product Recommendation System (ML-Based)</strong>
+                    <p>Developed an ML-based product recommender for user personalization (Commissioned by Ayan IT Services).</p>
+                </div>
+                 <div class="card">
+                    <strong>Smart Home Automation Using IoT</strong>
+                    <p>Practical IoT project demonstrating embedded systems application (Participated in PECTEAM 2K23).</p>
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Full Stack Developer Intern</strong> – Vinsup Infotech, Madurai (Jun 2024 – Jul 2025)</li>
-      <li><strong>Cyber Security Intern</strong> – Acmegrade (Jan 2024 – Feb 2024)</li>
-    </ul>
-  </section>
+        <section id="technical-skills">
+            <h2>Technical Skills & Soft Skills</h2>
+            <div class="card-list" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="card" style="border-left: 3px solid #007bff;">
+                    <strong>Languages & Web</strong>
+                    <ul>
+                        <li>Python, Java, C++, SQL</li>
+                        <li>HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 3px solid #28a745;">
+                    <strong>Tools & Domain</strong>
+                    <ul>
+                        <li>VS Code, Git, Arduino, UiPath</li>
+                        <li>Data Science, Generative AI, IoT, Facial Recognition</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 3px solid #ffc107;">
+                    <strong>Soft Skills & Interests</strong>
+                    <ul>
+                        <li>Fast Learner, Problem Solving, Team Collaboration</li>
+                        <li>Clubs: Neuro Nexus, IAENG | Interests: Dancing, Singing</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 3px solid #dc3545;">
+                    <strong>Portfolio QR Code</strong>
+                    <p style="margin-bottom: 5px;">Scan for live version:</p>
+                    <img src="images/qr.png" alt="QR Code for Live Portfolio" style="width: 100px; height: 100px; border: none; box-shadow: none;">
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Programming in Java — NPTEL (Jul–Oct 2024)</li>
-      <li>Machine Learning 101 — GUVI (Sep 2024)</li>
-      <li>Generative AI — GUVI (Sep 2024)</li>
-      <li>OCI 2024 Generative AI Certified Professional — Oracle (Jul 2024)</li>
-      <li>UiPath Automation Developer — UiPath (May 2025)</li>
-      <li>Intro to Data Science — Infosys (Mar 2025)</li>
-      <li>Data Science for Beginners — NASSCOM (Dec 2023)</li>
-      <li>Intro to Python — Infosys (Mar 2025)</li>
-    </ul>
-  </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><span class="highlight">B.E. Computer Science</span>, Panimalar Engineering College (2022–2026) – CGPA: 8.64</li>
+                <li><span class="highlight">12th Grade</span>, Sambaviga Hr. Sec. School (2021–2022) – Score: 90.5%</li>
+                <li><span class="highlight">10th Grade</span>, Sambaviga Hr. Sec. School (2019–2020) – Score: 72.6%</li>
+            </ul>
+        </section>
+    </div>
 
-  <section>
-    <h2>Achievements</h2>
-    <ul>
-      <li>IV Prize for Sound Synth Project – Panimalar Engineering College</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Clubs & Interests</h2>
-    <ul>
-      <li><strong>Clubs:</strong> Neuro Nexus, IAENG</li>
-      <li><strong>Interests:</strong> Dancing, Singing</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; |2025 Thendral A |</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Thendral A | Final Version</p>
+    </footer>
 </body>
 </html>
